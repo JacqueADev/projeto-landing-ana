@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo"><img src="/assets/logo.png" alt=""></div>
+                <div class="logo"><img src="/projeto-landing-ana/assets/logo.png" alt="" loading="lazy"></div>
                 <ul class="nav-links">
                     <li><a href="#about">Quem sou eu</a></li>
                     <li><a href="#services">Serviços</a></li>
@@ -42,7 +42,7 @@ Por um longo período em minha vida fui medrosa, sensível em excesso, insegura,
 Queria mudar de vida e acabei mudando a vida de todo mundo!</p>
             </div>
             <div class="hero-image">
-                <img src="/assets/img-perfil.png" alt="Foto de perfil">
+                <img src="/projeto-landing-ana/assets/img-perfil.png" alt="Foto de perfil" loading="lazy">
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@ Queria mudar de vida e acabei mudando a vida de todo mundo!</p>
         <h2 class="section-title">Sobre o meu trabalho <span class="underline"></span></h2>
         <div class="about-content">
             <div class="about-image">
-                <img src="/assets/img-section.png" alt="Foto profissional">
+                <img src="/projeto-landing-ana/assets/img-section.png" alt="Foto profissional" loading="lazy">
             </div>
             <div class="about-text">
                 <h2>Motivação</h2>
@@ -80,7 +80,7 @@ Queria mudar de vida e acabei mudando a vida de todo mundo!</p>
 </section>
 
 <!-- seção lembrete -->
-<section class="remember">
+<section class="remember with-bg-image">
     <div class="container">
         <div class="remember-content">
             <div class="remember-text">
@@ -93,56 +93,207 @@ Ao realizar um atendimento com Tarô, Baralho Cigano e outros oráculos, você a
     </div>
 </section>
 
-    <!-- Serviços -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Serviços prestados</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Serviço 1</h3>
-                    <p>Descrição breve do serviço oferecido.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-cut"></i>
-                    <h3>Serviço 2</h3>
-                    <p>Descrição breve do serviço oferecido.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-spa"></i>
-                    <h3>Serviço 3</h3>
-                    <p>Descrição breve do serviço oferecido.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>Serviço 4</h3>
-                    <p>Descrição breve do serviço oferecido.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-magic"></i>
-                    <h3>Serviço 5</h3>
-                    <p>Descrição breve do serviço oferecido.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-star"></i>
-                    <h3>Serviço 6</h3>
-                    <p>Descrição breve do serviço oferecido.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- Serviços -->
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">Serviços prestados</h2>
+        <div class="services-grid">
 
-    <!-- Seção com foto e agendamento -->
-    <section class="booking">
-        <div class="container">
-            <div class="booking-content">
-                <img src="https://via.placeholder.com/500x300" alt="Foto adicional" style="max-width: 100%; border-radius: 10px; margin-bottom: 30px;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt pharetra, augue ligula fermentum nulla, sed fringilla mauris arcu nec nisl. Suspendisse potenti. Maecenas dignissim tellus ac mi gravida, id pharetra arcu viverra. In eget velit vitae magna congue efficitur.</p>
-                <div class="price">R$ 0,00</div>
-                <a href="#contact" class="btn">AGENDAR</a>
+                        <!-- Card 0 -->
+            <div class="service-card">
+                <i class="fa-solid fa-face-grin-wide"></i>
+                <h3>Consulta convencional</h3>
+                <p>1 hora direto comigo online ou presencial e vamos falar sobre absolutamente tudo</p>
+                <div class="price">R$ 190,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="consulta">SAIBA MAIS</button>
+                </div>
             </div>
+
+            <!-- Card 1 -->
+            <div class="service-card">
+                <i class="fas fa-scroll"></i>
+                <h3>1 pergunta objetiva ao Tarô</h3>
+                <p>Você faz uma pergunta objetiva sobre qualquer área da sua vida</p>
+                <div class="price">R$ 40,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="pergunta-objetiva">SAIBA MAIS</button>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="service-card">
+                <i class="fa-solid fa-seedling"></i>
+                <h3>Receita para banho enegético</h3>
+                <p>Para aqueles que buscam proteção das ervas com a fitoterapia</p>
+                <div class="price">R$ 17,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="banho-energetico">SAIBA MAIS</button>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="service-card">
+                <i class="fas fa-leaf"></i> 
+                <h3>Floral de Bach para humanos</h3>
+                <p>terapia natural que utiliza essências florais e de plantas</p>
+                <div class="price">R$ 80,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="floral-humano">SAIBA MAIS</button>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="service-card">
+               <i class="fas fa-star"></i> 
+                <h3>Mentoria Energética</h3>
+                <p>Aqui eu pego você pela mão e te ajudo a fazer as mudanças que você deseja em sua vida</p>
+                <div class="price">R$ 280,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="mentoria-energetica">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 5 -->
+            <div class="service-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Sessão de Psicoterapia</h3>
+                <p>Terapia integrativa que une corpo, mente e espírito para ajudar você a entender, curar e transformar sua vida com lógica e ação</p>
+                <div class="price">R$ 180,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="psicoterapia">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 6 -->
+            <div class="service-card">
+                <i class="fas fa-gem"></i>
+                <h3>Mesa Radiônica</h3>
+                <p>Ferramenta energética que desbloqueia áreas da vida e harmoniza pessoas, espaços e situações</p>
+                <div class="price">R$ 290,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="radionica">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 7 -->
+            <div class="service-card">
+                <i class="fa-solid fa-meteor"></i>
+                <h3>Consulta Acorda pra Vida</h3>
+                <p>Avaliação energética que investiga o momento atual, bloqueios, trabalho interior, vínculos emocionais, raízes na infância e orientações para resolver e transformar a situação</p>
+                <div class="price">R$ 260,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="acorda-pra-vida">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 8 -->
+            <div class="service-card">
+                <i class="fa-solid fa-paw"></i>
+                <h3>Mesa Radiônica Pet</h3>
+                <p>Equilibra energeticamente pets e silvestres, tratando traumas, saúde e comportamento com apoio veterinário 24h</p>
+                <div class="price">R$ 180,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="radionica-pet">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 9 -->
+            <div class="service-card">
+                <i class="fas fa-hand-sparkles"></i>
+                <h3>Reiki</h3>
+                <p>AGUARDANDO TEXTO</p>
+                <div class="price">R$ 100,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="reiki">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 10 -->
+            <div class="service-card">
+               <i class="fas fa-scroll"></i>
+                <h3>Mesa real - Baralho Cigano</h3>
+                <p>Leitura de cartas com enfoque no autoconhecimento e desenvolvimento</p>
+                <div class="price">R$ 320,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="baralho-cigano">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 11 -->
+            <div class="service-card">
+                <i class="fas fa-circle-notch"></i>
+                <h3>Mandala Anual</h3>
+                <p>Mapa personalizado que revela tendências e orientações para cada área da sua vida ao longo do ano, com base na sua astrologia</p>
+                <div class="price">R$ 420,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="mandala-anual">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 12 -->
+            <div class="service-card">
+                <i class="fas fa-moon"></i>
+                <h3>Leitura com Dama da Noite</h3>
+                <p>Leitura canalizada através do campo mental e espiritual da guardiã e pomba gira Dama da Noite. Valor por pergunta objetiva</p>
+                <div class="price">R$ 70,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="dama-noite">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 13 -->
+            <div class="service-card">
+                <i class="fas fa-user-check"></i>
+                <h3>Carta do Dia - Individual</h3>
+                <p>Conselho diário por áudio feito com base na sua energia no dia. Plano mensal</p>
+                <div class="price">R$ 117,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="carta-do-dia-individual">SAIBA MAIS</button>
+                </div>
+            </div>
+
+             <!-- Card 14 -->
+            <div class="service-card">
+                <i class="fas fa-users"></i>
+                <h3>Carta do dia - Grupo</h3>
+                <p>Leitura de cartas com enfoque no autoconhecimento e desenvolvimento. Plano mensal</p>
+                <div class="price">R$ 21,00</div>
+                <div class="card-buttons">
+                    <a href="#contact" class="btn">AGENDAR</a>
+                    <button class="btn btn-more" data-service="carta-do-dia-grupo">SAIBA MAIS</button>
+                </div>
+            </div>
+
+    
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="serviceModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-title">Título do Serviço</h2>
+        <div id="modal-description">
+            <p>Descrição detalhada do serviço será inserida aqui.</p>
+        </div>
+    </div>
+</div>
 
     <!-- Pagamento -->
     <section class="payment">
@@ -150,24 +301,12 @@ Ao realizar um atendimento com Tarô, Baralho Cigano e outros oráculos, você a
             <h2 class="section-title">Formas de pagamento aceitas</h2>
             <div class="payment-methods">
                 <div class="payment-method">
-                    <i class="fab fa-cc-visa"></i>
-                    <p>Visa</p>
-                </div>
-                <div class="payment-method">
-                    <i class="fab fa-cc-mastercard"></i>
-                    <p>Mastercard</p>
-                </div>
-                <div class="payment-method">
-                    <i class="fab fa-cc-amex"></i>
-                    <p>Amex</p>
+                    <i class="fas fa-credit-card"></i>
+                    <p>Cartão de crédito ou débito</p>
                 </div>
                 <div class="payment-method">
                     <i class="fas fa-money-bill-wave"></i>
                     <p>Dinheiro</p>
-                </div>
-                <div class="payment-method">
-                    <i class="fas fa-barcode"></i>
-                    <p>Boleto</p>
                 </div>
                 <div class="payment-method">
                     <i class="fab fa-pix"></i>
@@ -180,68 +319,84 @@ Ao realizar um atendimento com Tarô, Baralho Cigano e outros oráculos, você a
     <!-- Benefícios -->
     <section class="benefits">
         <div class="container">
+            
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h3>Atendimento personalizado</h3>
-                    <p>Explicando sobre o atendimento ser totalmente individualizado. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt pharetra.</p>
+                    <h3>Atendimento totalmente personalizado</h3>
+                    <p>Aqui, ouço com atenção, entendo as necessidades individuais e ofereço um atendimento sob medida, pensado exclusivamente para você. Nada de respostas genéricas: meu compromisso é criar uma experiência única, empática e alinhada com o que você realmente precisa.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>Segurança</h3>
-                    <p>Falando sobre segurança e descrição de atendimentos. A gente sempre insere isso aqui pra deixar o cliente mais confortável mesmo.</p>
+                    <h3>Segurança e Sigilo</h3>
+                    <p>Todo o atendimento é realizado com total sigilo, respeito e ética, garantindo a sua privacidade em cada etapa do processo. Suas informações e vivências são tratadas com o cuidado que merecem, em um ambiente seguro, acolhedor e livre de julgamentos. Você pode se abrir com tranquilidade — estou aqui por inteiro, para cuidar de você com responsabilidade e presença.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Localização -->
-    <section class="location" id="location">
-        <div class="container">
-            <h2 class="section-title">Localização</h2>
-            <div class="map-container">
-                <p>Mapa do Google Maps será inserido aqui</p>
-            </div>
+   <!-- Localização -->
+<section class="location" id="location">
+    <div class="container">
+        <h2 class="section-title">Localização <span class="underline"></span></h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.438196755615!2d-48.32247992469108!3d-21.04321108059382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b96b9e0a9c0b1b%3A0x1f1e3a3e3e3e3e3e!2sR.%20Campos%20Bicudo%2C%20101%20-%20Recreio%20dos%20Bandeirantes%2C%20Jaboticabal%20-%20SP%2C%2014883-412!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </section>
+        <div class="location-info">
+            <p><i class="fas fa-map-marker-alt"></i> R. Campos Bicudo, 101 - Recreio dos Bandeirantes - Jaboticabal - SP, 14883-412</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Formulário de Contato -->
-    <section class="contact-form" id="contact">
-        <div class="container">
-            <h2 class="section-title">Agende seu horário</h2>
-            <form id="appointmentForm">
-                <div class="form-group">
-                    <label for="name">Nome completo</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Telefone</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">Serviço desejado</label>
-                    <select id="service" name="service" required>
-                        <option value="">Selecione um serviço</option>
-                        <option value="servico1">Serviço 1</option>
-                        <option value="servico2">Serviço 2</option>
-                        <option value="servico3">Serviço 3</option>
-                        <option value="servico4">Serviço 4</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="date">Data preferencial</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensagem adicional</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">ENVIAR AGENDAMENTO</button>
-            </form>
-        </div>
-    </section>
+   <!-- Formulário de Contato -->
+<section class="contact-form" id="contact">
+    <div class="container">
+        <h2 class="section-title">Agende seu horário</h2>
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Serviço desejado</label>
+                <select id="service" name="service" required>
+                    <option value="">Selecione um serviço</option>
+                    <option value="consulta-convencional">Consulta convencional</option>
+                    <option value="pergunta-objetiva-taro">1 pergunta objetiva ao Tarô</option>
+                    <option value="banho-energetico">Receita para banho energético</option>
+                    <option value="floral-bach-humano">Floral de Bach para humanos</option>
+                    <option value="mentoria-energetica">Mentoria Energética</option>
+                    <option value="psicoterapia">Sessão de Psicoterapia</option>
+                    <option value="mesa-radionica">Mesa Radiônica</option>
+                    <option value="acorda-pra-vida">Consulta Acorda pra Vida</option>
+                    <option value="mesa-radionica-pet">Mesa Radiônica Pet</option>
+                    <option value="reiki">Reiki</option>
+                    <option value="baralho-cigano">Mesa real - Baralho Cigano</option>
+                    <option value="mandala-anual">Mandala Anual</option>
+                    <option value="dama-noite">Leitura com Dama da Noite</option>
+                    <option value="carta-dia-individual">Carta do Dia - Individual</option>
+                    <option value="carta-dia-grupo">Carta do dia - Grupo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Data preferencial</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem adicional</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="button" id="whatsappButton" class="submit-btn">ENVIAR AGENDAMENTO</button>
+        </form>
+    </div>
+</section>
+
 
     <!-- Rodapé -->
     <footer>
@@ -249,8 +404,7 @@ Ao realizar um atendimento com Tarô, Baralho Cigano e outros oráculos, você a
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Contato</h3>
-                    <p><i class="fas fa-phone"></i> (00) 0000-0000</p>
-                    <p><i class="fas fa-envelope"></i> email@exemplo.com</p>
+                    <p><i class="fas fa-phone"></i> (19) 99781-5295</p>
                 </div>
                 <div class="footer-column">
                     <h3>Horário de atendimento</h3>
@@ -260,14 +414,14 @@ Ao realizar um atendimento com Tarô, Baralho Cigano e outros oráculos, você a
                 <div class="footer-column">
                     <h3>Redes sociais</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/anaarantes.terapeuta/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/anaarantes.terapeuta"><i class="fab fa-facebook"></i></a>
+                        <a href="https://api.whatsapp.com/message/4TGG4AA5PJIHC1?autoload=1&app_absent=0"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Nome Profissional. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Annà Árantes. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
