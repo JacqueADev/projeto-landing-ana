@@ -141,9 +141,9 @@ nav {
 }
 
 .hero-text h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--cor-fonte-link-1);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-weight: bolder;
 }
 
