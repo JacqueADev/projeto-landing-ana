@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModal = document.querySelector('.close-modal');
     const moreButtons = document.querySelectorAll('.btn-more');
     
-        // Dados detalhados de todos os serviços
+   // Dados detalhados de todos os serviços
     const servicesData = {
         'pergunta-objetiva': {
             title: '1 pergunta objetiva ao Tarô',
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'floral-humano': {
             title: 'Floral de Bach para humanos',
-            description: `<p>Tratamento terapêutico através de essências de flores e plantas, que trazem <strong>alívio e equilíbrio emocional</strong>.</p>
+            description: `<p>Tratamento terapêutico através de essências de flores e plantas, que trazem <strong>alívio e equilibro emocional</strong>.</p>
             <p><strong>Envio apenas da receita.</strong></p>`
         },
         'mentoria-energetica': {
@@ -103,12 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'reiki': {
             title: 'Reiki',
-            description: `<p>Prática terapêutica de origem japonesa, reconhecida como terapia integrativa pela Organização Mundial da Saúde (OMS) e inclusive aplicada no Sistema Único de Saúde (SUS) no Brasil. A palavra Reiki significa "energia vital universal", um conceito que descreve a energia que flui através de todos os seres vivos. Esta técnica se baseia na crença de que o terapeuta, conhecido como mestre reikiano, pode canalizar essa energia universal através da imposição das mãos sobre o corpo do paciente, ou mesmo à distância, para promover o equilíbrio e o bem-estar.
-
-<strong><li>A aplicação</strong> do Reiki visa restaurar o equilíbrio energético do indivíduo em níveis físico, mental e emocional. Acredita-se que bloqueios ou desequilíbrios no fluxo de energia vital podem levar a diversos problemas de saúde e mal-estar. Durante uma sessão típica, que dura aproximadamente uma hora, o terapeuta posiciona as mãos suavemente sobre pontos específicos do corpo do paciente, correspondentes aos centros de energia conhecidos como chakras, ou mantém as mãos a uma pequena distância. O objetivo é facilitar o fluxo livre da energia vital, ajudando a regularizar as funções vitais do corpo, fortalecer o sistema imunológico e revitalizar o sistema nervoso.</li>
-
-<strong><li>Os benefícios</strong> associados à prática do Reiki são variados, atuando como um complemento a tratamentos médicos convencionais. Ele é frequentemente procurado para auxiliar no alívio do estresse, da ansiedade e da depressão, além de poder contribuir para a redução de dores, fadiga, insônia e náuseas. Mais do que tratar sintomas específicos, o Reiki busca promover um estado de relaxamento profundo, paz interior e clareza mental, incentivando uma maior consciência corporal e emocional. A prática regular pode levar a uma mudança na percepção das dificuldades cotidianas, promovendo um estilo de vida mais equilibrado e saudável.</p></li>
-<li><strong>Aplicação presencial</strong> ou a <strong>distância</strong> - consulte os valores </li>`
+            description: `<p>Prática terapêutica de origem japonesa, reconhecida como terapia integrativa pela Organização Mundial da Saúde (OMS) e inclusive aplicada no Sistema Único de Saúde (SUS) no Brasil. A palavra Reiki significa "energia vital universal", um conceito que descreve a energia que flui através de todos os seres vivos. Esta técnica se baseia na crença de que o terapeuta, conhecido como mestre reikiano, pode canalizar essa energia universal através da imposição das mãos sobre o corpo do paciente, ou mesmo à distância, para promover o equilíbrio e o bem-estar.</p>
+            <p><strong>A aplicação</strong> do Reiki visa restaurar o equilíbrio energético do indivíduo em níveis físico, mental e emocional. Acredita-se que bloqueios ou desequilíbrios no fluxo de energia vital podem levar a diversos problemas de saúde e mal-estar. Durante uma sessão típica, que dura aproximadamente uma hora, o terapeuta posiciona as mãos suavemente sobre pontos específicos do corpo do paciente, correspondentes aos centros de energia conhecidos como chakras, ou mantém as mãos a uma pequena distância. O objetivo é facilitar o fluxo livre da energia vital, ajudando a regularizar as funções vitais do corpo, fortalecer o sistema imunológico e revitalizar o sistema nervoso.</p>
+            <p><strong>Os benefícios</strong> associados à prática do Reiki são variados, atuando como um complemento a tratamentos médicos convencionais. Ele é frequentemente procurado para auxiliar no alívio do estresse, da ansiedade e da depressão, além de poder contribuir para a redução de dores, fadiga, insônia e náuseas. Mais do que tratar sintomas específicos, o Reiki busca promover um estado de relaxamento profundo, paz interior e clareza mental, incentivando uma maior consciência corporal e emocional. A prática regular pode levar a uma mudança na percepção das dificuldades cotidianas, promovendo um estilo de vida mais equilibrado e saudável.</p>
+            <p><strong>Aplicação presencial</strong> ou a <strong>distância</strong> - consulte os valores</p>`
         },
         'baralho-cigano': {
             title: 'Mesa real com Baralho Cigano',
@@ -247,18 +245,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // =============================================
+    // Configuração do Flatpickr para desabilitar domingos
+    // =============================================
+    const dateInput = document.getElementById('date');
+    
+    // Inicializar Flatpickr
+    const flatpickrInstance = flatpickr(dateInput, {
+        locale: "pt", // Idioma português
+        minDate: "today", // Não permite datas anteriores a hoje
+        dateFormat: "d/m/Y", // Formato brasileiro
+        disable: [
+            function(date) {
+                // Desabilita domingos (dia 0)
+                return (date.getDay() === 0);
+            }
+        ],
+        onReady: function(selectedDates, dateStr, instance) {
+            // Garante que o campo esteja vazio ao abrir
+            instance.clear();
+        }
+    });
+
+    // =============================================
     // Integração com WhatsApp - COM VALIDAÇÕES ADICIONAIS
     // =============================================
     const whatsappButton = document.getElementById('whatsappButton');
     
     whatsappButton.addEventListener('click', function() {
         // Obter os valores do formulário
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
         const service = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
-        const date = document.getElementById('date').value;
-        const message = document.getElementById('message').value;
+        const date = dateInput.value; // Agora usando o valor do Flatpickr
+        const message = document.getElementById('message').value.trim();
         
         // Validar campos obrigatórios
         if (!name || !email || !phone || !service || service === "Selecione um serviço" || !date) {
@@ -266,7 +286,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // VALIDAÇÕES ADICIONAIS IMPLEMENTADAS AQUI
         // Validar telefone (com DDD, 10 ou 11 dígitos)
         const phoneDigits = phone.replace(/\D/g, '');
         if (!/^\d{10,11}$/.test(phoneDigits)) {
@@ -280,10 +299,10 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Validar data (não pode ser no passado)
-        const selectedDate = new Date(date);
+        // Validar data (não precisa mais verificar domingo pois o Flatpickr já bloqueia)
+        const selectedDate = new Date(flatpickrInstance.selectedDates[0]);
         const today = new Date();
-        today.setHours(0, 0, 0, 0); // Zerar horas para comparar apenas a data
+        today.setHours(0, 0, 0, 0);
         
         if (selectedDate < today) {
             alert('Por favor, selecione uma data futura para o agendamento.');
@@ -291,7 +310,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Formatar a data para exibição
-        const formattedDate = selectedDate.toLocaleDateString('pt-BR');
+        const formattedDate = selectedDate.toLocaleDateString('pt-BR', {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
         
         // Criar mensagem para WhatsApp
         const whatsappMessage = `Olá Ana, gostaria de agendar um serviço:
@@ -337,3 +361,4 @@ Aguardo seu retorno!`;
         });
     });
 });
+

@@ -6,6 +6,8 @@
     <title>Annà Árantes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -388,7 +390,8 @@ Ao realizar um atendimento com Tarô, Baralho Cigano e outros oráculos, você a
                     <option value="mesa-radionica">Mesa Radiônica</option>
                     <option value="acorda-pra-vida">Consulta Acorda pra Vida</option>
                     <option value="mesa-radionica-pet">Mesa Radiônica Pet</option>
-                    <option value="reiki">Reiki</option>
+                    <option value="reiki">Reiki - Presencial</option>
+                    <option value="reiki">Reiki - A Distância</option>
                     <option value="baralho-cigano">Mesa real - Baralho Cigano</option>
                     <option value="mandala-anual">Mandala Anual</option>
                     <option value="dama-noite">Leitura com Dama da Noite</option>
@@ -396,11 +399,11 @@ Ao realizar um atendimento com Tarô, Baralho Cigano e outros oráculos, você a
                     <option value="carta-dia-grupo">Carta do dia - Grupo</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="date">Data preferencial</label>
-                <input type="date" id="date" name="date" required>
-                <small class="form-help">Atendimentos de segunda a sábado</small>
-            </div>
+           <div class="form-group">
+    <label for="date">Data preferencial</label>
+    <input type="text" id="date" name="date" placeholder="Selecione uma data" required>
+    <small class="form-help">Atendimentos de segunda a sábado</small>
+</div>
             <div class="form-group">
                 <label for="message">Mensagem adicional</label>
                 <textarea id="message" name="message"></textarea>
@@ -440,5 +443,7 @@ Ao realizar um atendimento com Tarô, Baralho Cigano e outros oráculos, você a
     </footer>
 
     <script src="landing.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
 </body>
 </html>
