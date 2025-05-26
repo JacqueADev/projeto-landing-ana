@@ -366,10 +366,26 @@ nav {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+.service-card img{
+ width: 120px;       /* Largura fixa */
+    height: 120px;      /* Altura fixa */
+    object-fit: contain; /* Mantém proporção sem distorcer */
+    margin: 0 auto 15px; /* Centraliza e adiciona espaço abaixo */
+    display: block;     /* Necessário para margin: auto funcionar */
+    padding: 5px;       /* Espaçamento interno (opcional) */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
+}
+
 .service-card i {
-    font-size: 40px;
-    color: #555;
+    color: #000000;
     margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 40px;
 }
 
 .service-card h3 {
