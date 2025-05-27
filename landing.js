@@ -41,8 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'floral-humano': {
             title: 'Floral de Bach para humanos',
-            description: `<p>Tratamento terapêutico através de essências de flores e plantas, que trazem <strong>alívio e equilibro emocional</strong>.</p>
-            <p><strong>Envio apenas da receita.</strong></p>`
+            description: `<p>Os <strong>Florais de Bach</strong> são uma terapia natural desenvolvida pelo Dr. Edward Bach, que utiliza essências de 38 flores silvestres para equilibrar as emoções. O tratamento busca restaurar o equilíbrio interior, aliviando sentimentos negativos como medo, ansiedade e insegurança, e promovendo o bem-estar emocional.</p>
+<p>É uma prática <strong>complementar, sem contraindicações</strong>, que pode ser usada por pessoas de todas idades para auxiliar no processo de autoconhecimento e cura, sempre como um suporte ao tratamento médico convencional, e não um substituto.</p>
+<p><strong>Envio a receita</strong> e você escolhe a farmácia da sua preferência para manipular o floral.</p>`
         },
         'mentoria-energetica': {
             title: 'Mentoria Energética',
@@ -147,18 +148,22 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'mandala-anual': {
             title: 'Mandala Anual',
-            description: `<p>Estudo enviado via Whatsapp com <strong>fotos, vídeo e áudios</strong>.</p>
-            <p>Após receber o seu material você tem <strong>24 horas</strong> para fazer até uma pergunta, caso ainda tenha dúvidas.</p>
-            <p>Material enviado em <strong>até 15 dias</strong>.</p>
-            <p><strong>Agendamento e pagamento antecipado.</strong> Desconto para assinantes da Carta do Dia.</p>`
+            description: `<p>Descubra o que os próximos 12 meses reservam para você com a <strong>Mandala Anual de tarô</strong>. Uma jornada profunda de autoconhecimento e clareza, revelando os caminhos e potenciais de cada área da sua vida – amor, carreira, finanças, espiritualidade e muito mais.</p>
+<p>A Mandala anual é o mapa que ilumina seu ano, oferecendo <strong>insights poderosos</strong> para você tomar as melhores decisões e cocriar um futuro extraordinário. Desvende seus próximos 365 dias. Agende sua leitura e transforme o seu ano!</p>
+<p>A avaliação é enviada via Whatsapp com <strong>fotos, vídeo e áudios</strong>.</p>
+<p>Material enviado em <strong>até 10 dias</strong>.</p>
+<p><strong>Agendamento e pagamento antecipado.</strong> Desconto especial para assinantes da Carta do Dia.</p>`
         },
         'dama-noite': {
             title: 'Leitura com Dama da Noite',
-            description: `<p>Essa e nenhuma das minhas leituras possuem <strong>cunho religioso ou dogmas</strong>, respeitando todas e quaisquer crenças que possam existir.</p>
-            <p><strong>O valor citado é por pergunta objetiva.</strong></p>
-            <p>Resposta e orientação enviados em <strong>até 48 horas</strong> (em dias úteis).</p>
-            <p>O envio das respostas é feito por <strong>fotos e mensagens de texto, via Whatsapp</strong>.</p>
-            <p><strong>Desconto para assinantes da Carta do Dia.</strong></p>`
+            description: `<p>A <strong>Pomba Gira Dama da Noite</strong> é uma entidade envolta em mistério e sofisticação. Uma das lendas sobre sua vida terrena conta a história de Carmen, uma jovem que, após perder os pais e sofrer nas mãos dos tios, foi levada a um cabaré. Lá, sua beleza atraiu muitos, mas também a levou a um fim trágico ao se defender de um cliente poderoso.</p>
+<p>Após vagar como espírito, evoluiu e tornou-se a <strong>Dama da Noite</strong>, trabalhando na linha de Oxum. Caracteriza-se pela elegância, preferência por tons escuros e dourados, e o perfume da flor Dama da Noite que anuncia sua chegada. É conhecida por sua discrição, poder de agir nas sombras e auxílio em questões de amor, justiça e autoestima, sempre com um ar enigmático e observador.</p>
+<p>Desvende os mistérios do seu caminho com uma leitura de tarô guiada pela energia enigmática e poderosa da <strong>Pomba Gira Dama da Noite</strong>. Conecte-se com a sabedoria que emerge das sombras, trazendo clareza para o amor, força para suas batalhas por justiça e luz para sua autoestima.</p>
+<p>Permita que a Dama da Noite ilumine suas questões mais profundas com sua <strong>intuição certeira</strong> e olhar penetrante. Agende sua consulta e sinta a transformação que a noite pode trazer para sua vida. Você está pronto para descobrir?</p>
+<p><strong>Valor por pergunta objetiva.</strong></p>
+<p>Resposta enviada em <strong>até 48 horas</strong> (em dias úteis).</p>
+<p>Material enviado por <strong>vídeo das cartas e mensagem de texto</strong>, via Whatsapp.</p>
+<p><strong>Desconto especial</strong> para assinantes da Carta do Dia.</p>`
         },
         'carta-do-dia-individual': {
             title: 'Carta do dia individual',
