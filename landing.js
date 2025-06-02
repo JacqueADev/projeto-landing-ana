@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'mandala-anual': {
             title: 'Mandala Anual',
-            description: `<p>Descubra o que os próximos 12 meses reservam para você com a <strong>Mandala Anual de tarô</strong>. Uma jornada profunda de autoconhecimento e clareza, revelando os caminhos e potenciais de cada área da sua vida – amor, carreira, finanças, espiritualidade e muito mais.</p>
+            description: `<p>Descubra o que os próximos 12 meses reservam para você com a <strong>Mandala Anual de tarô</strong>. Uma jornada profunda de autoconhecimento e clareza, revelando os caminhos e potenciais de cada área da sua vida - amor, carreira, finanças, espiritualidade e muito mais.</p>
 <p>A Mandala anual é o mapa que ilumina seu ano, oferecendo <strong>insights poderosos</strong> para você tomar as melhores decisões e cocriar um futuro extraordinário. Desvende seus próximos 365 dias. Agende sua leitura e transforme o seu ano!</p>
 <p>A avaliação é enviada via Whatsapp com <strong>fotos, vídeo e áudios</strong>.</p>
 <p>Material enviado em <strong>até 10 dias</strong>.</p>
@@ -291,11 +291,20 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Validar telefone (com DDD, 10 ou 11 dígitos)
+        // Validar telefone (aceita números internacionais)
         const phoneDigits = phone.replace(/\D/g, '');
-        if (!/^\d{10,11}$/.test(phoneDigits)) {
-            alert('Por favor, insira um telefone válido com DDD (10 ou 11 dígitos).');
+        if (phoneDigits.length < 8 || phoneDigits.length > 15) {
+            alert('Por favor, insira um telefone válido com código do país (8 a 15 dígitos).\nExemplo: +5511999999999 ou +447911123456');
             return;
+        }
+        
+        // Verificar se tem código de país (opcional)
+        if (!phone.includes('+')) {
+            if (confirm('Você está incluindo o código do país no seu número? (Ex: +55 para Brasil)\nCaso não tenha certeza, clique em Cancelar e verifique.')) {
+                // Usuário confirmou que está correto
+            } else {
+                return;
+            }
         }
         
         // Validar e-mail
@@ -366,4 +375,3 @@ Aguardo seu retorno!`;
         });
     });
 });
-
